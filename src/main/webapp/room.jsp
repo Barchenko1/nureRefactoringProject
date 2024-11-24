@@ -17,6 +17,14 @@
             <div class="col-md-4 col-md-push-4">
                 <h3><a href="/index.jsp">Return</a></h3>
             </div>
+            <c:if test="${not empty sessionScope.loggedInAdmin}">
+                    <div class="col-md-4 col-md-push-4 d-flex justify-content-end align-items-center">
+                        <p class="mr-3">Welcome, ${sessionScope.loggedInAdmin.email}</p>
+                        <form action="logout" method="get" class="mb-0">
+                            <button type="submit" class="btn btn-danger">Logout</button>
+                        </form>
+                    </div>
+            </c:if>
           </div>
           <h2 class= "center">Our rooms</h2>
            <form class= "center">

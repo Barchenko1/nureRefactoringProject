@@ -214,7 +214,7 @@ public class JdbcRoomsDao extends AbstractJdbcDao implements RoomDao {
         @Override public Room mapRow(ResultSet rs) {
             try {
                 Room room = new Room();
-                room.setId(rs.getInt(Fields.ROOM_ID));
+                room.setId(rs.getInt(Fields.ID));
                 room.setNumber(rs.getInt(Fields.ROOM_NUMBER));
                 room.setCapacity(rs.getInt(Fields.ROOM_CAPACITY));
                 room.setFlour(rs.getInt(Fields.ROOM_FLOUR));

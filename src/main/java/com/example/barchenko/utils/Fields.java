@@ -9,17 +9,18 @@ public final class Fields {
     public static final String DB_PASS = "jdbc.password";
 
     //HOSTEL
-    public static final String HOSTEL_ID = "id";
-    public static final String HOSTEL_NAME = "name";
+    public static final String ID = "id";
+
+    //
+    public static final String ADMIN_EMAIL = "email";
+    public static final String ADMIN_PASSWORD = "password";
 
     //ROOM
-    public static final String ROOM_ID = "id";
     public static final String ROOM_NUMBER = "number";
     public static final String ROOM_CAPACITY = "capacity";
     public static final String ROOM_FLOUR = "flour";
     public static final String ROOM_HOSTEL_ID = "Hostel_id";
     //STUDENT
-    public static final String STUDENT_ID = "id";
     public static final String STUDENT_FNAME = "fname";
     public static final String STUDENT_LNAME = "lname";
     public static final String STUDENT_AGE = "age";

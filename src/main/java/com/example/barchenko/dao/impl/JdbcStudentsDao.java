@@ -249,7 +249,7 @@ public class JdbcStudentsDao extends AbstractJdbcDao implements StudentDao {
         @Override public Student mapRow(ResultSet rs) {
             try {
                 Student student = new Student();
-                student.setId(rs.getInt(Fields.STUDENT_ID));
+                student.setId(rs.getInt(Fields.ID));
                 student.setFname(rs.getString(Fields.STUDENT_FNAME));
                 student.setLname(rs.getString(Fields.STUDENT_LNAME));
                 student.setAge(rs.getInt(Fields.STUDENT_AGE));
