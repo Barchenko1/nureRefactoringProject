@@ -36,7 +36,7 @@ public class AuthenticationFilter implements Filter {
 
         if (session == null || session.getAttribute("loggedInAdmin") == null) {
             resp.sendRedirect("loginForm.jsp");
-            return; // Stop further processing
+            return;
         }
 
         chain.doFilter(request, response);

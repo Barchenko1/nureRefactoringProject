@@ -6,6 +6,7 @@ import com.example.barchenko.dao.impl.JdbcAdminDao;
 import com.example.barchenko.dao.impl.JdbcRoomsDao;
 import com.example.barchenko.entity.Admin;
 import com.example.barchenko.entity.Room;
+import org.mindrot.jbcrypt.BCrypt;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -42,7 +43,8 @@ public class CreateAdminController extends HttpServlet {
             resp.sendRedirect("createAdmin.jsp");
             return;
         }
-        Admin admin = new Admin(email,password);
+        String hashedPassword = BCrypt.hashpw(password, BCrypt.gensalt());
+        Admin admin = new Admin(email,hashedPassword);
         adminDao.createAdmin(admin);
         resp.sendRedirect("loginForm.jsp");
     }

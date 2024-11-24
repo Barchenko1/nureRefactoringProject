@@ -3,6 +3,7 @@ package com.example.barchenko.controller;
 import com.example.barchenko.dao.AdminDao;
 import com.example.barchenko.dao.impl.JdbcAdminDao;
 import com.example.barchenko.entity.Admin;
+import org.mindrot.jbcrypt.BCrypt;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -36,7 +37,7 @@ public class LoginController extends HttpServlet {
             req.getRequestDispatcher("loginForm.jsp").forward(req, resp);
             return;
         }
-        if (!password.equals(adminExist.getPassword())) {
+        if (!BCrypt.checkpw(password, adminExist.getPassword())) {
             req.setAttribute("errorMessage", "Invalid password.");
             req.getRequestDispatcher("loginForm.jsp").forward(req, resp);
             return;

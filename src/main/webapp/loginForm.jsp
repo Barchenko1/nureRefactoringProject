@@ -27,7 +27,7 @@
     <tr>
         <td align="right">Password</td>
         <td>
-            <input name="password" type="text" required>
+            <input name="password" type="password" required>
         </td>
     </tr>
     <tr>

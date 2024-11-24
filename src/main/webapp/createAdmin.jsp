@@ -27,13 +27,13 @@
     <tr>
         <td align="right">Password</td>
         <td>
-            <input name="password" type="text" required>
+            <input name="password" type="password" required>
         </td>
     </tr>
     <tr>
          <td align="right">Confirm password</td>
          <td>
-             <input name="cpassword" type="text" required>
+             <input name="cpassword" type="password" required>
          </td>
     </tr>
     <tr>
